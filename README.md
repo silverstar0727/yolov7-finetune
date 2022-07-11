@@ -23,14 +23,16 @@ python download_data.py
 python xml_to_yolo.py
 python split_yolo_data.py
 
-python /content/yolov7/train.py \
+wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt
+
+python yolov7/train.py \
 --workers 8 \
 --device 0 \
 --batch-size 16 \
---data /content/yolov7/data/coco.yaml \
+--data yolov7/data/coco.yaml \
 --img 640 640 \
---cfg /content/yolov7/cfg/training/yolov7.yaml \
---weights /content/yolov7.pt \
+--cfg yolov7/cfg/training/yolov7.yaml \
+--weights yolov7.pt \
 --name yolov7 \
---hyp /content/yolov7/data/hyp.scratch.p5.yaml
+--hyp yolov7/data/hyp.scratch.p5.yaml
 ```

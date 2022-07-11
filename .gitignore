@@ -3,3 +3,4 @@ annotations
 yolo
 nohup*
 dataset
+*.pt
