@@ -1,6 +1,9 @@
 ### 출처
-- [원본 yolov7 repository](https://github.com/WongKinYiu/yolov7)
-- [YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors](https://arxiv.org/abs/2207.02696)
+- 모델
+  - [원본 yolov7 repository](https://github.com/WongKinYiu/yolov7)
+  - [YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors](https://arxiv.org/abs/2207.02696)
+- 데이터
+  - [kaggle mask detection](https://www.kaggle.com/datasets/andrewmvd/face-mask-detection)
 
 
 도커 실행
