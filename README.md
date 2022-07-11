@@ -1,9 +1,10 @@
 ```
 docker run \
 --name yolov7 \
--it -d \
--v /workspace:/home/ubuntu/yolov7-finetune \
+-it -d --rm \
+-v /home/ubuntu/yolov7-finetune:/yolov7 \
 --ipc=host \
+--gpus all \
 nvcr.io/nvidia/pytorch:21.08-py3
 ```
 
@@ -15,9 +16,9 @@ apt update
 apt install -y zip htop screen libgl1-mesa-glx
 
 # pip install required packages
-pip install seaborn thop
+pip install seaborn thop boto3
 
-cd /workspace
+cd /yolov7
 python download_data.py
 python xml_to_yolo.py
 python split_yolo_data.py
