@@ -4,3 +4,5 @@ yolo
 nohup*
 dataset
 *.pt
+__pycache__
+runs
