@@ -1,3 +1,4 @@
+도커 실행
 ```
 docker run \
 --name yolov7 \
@@ -6,23 +7,28 @@ docker run \
 --ipc=host \
 --gpus all \
 nvcr.io/nvidia/pytorch:21.08-py3
-```
 
-```
 docker exec -it yolov7 /bin/bash
+```
 
-# apt install required packages
+필요한 패키지 설치
+```
 apt update
 apt install -y zip htop screen libgl1-mesa-glx
 
-# pip install required packages
 pip install seaborn thop boto3
+```
 
+데이터 다운로드 및 전처리 (aws 인증 필요)
+```
 cd /yolov7
 python download_data.py
 python xml_to_yolo.py
 python split_yolo_data.py
+```
 
+모델 다운로드 및 학습 진행
+```
 wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt
 
 python yolov7/train.py \
