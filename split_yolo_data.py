@@ -5,7 +5,7 @@ import random
 yolo_img_dir = "images"
 yolo_label_dir = "yolo/labels"
 
-target_dataset_dir = "coco"
+target_dataset_dir = "dataset"
 
 os.makedirs(f"{target_dataset_dir}/images/train", exist_ok=True)
 os.makedirs(f"{target_dataset_dir}/images/val", exist_ok=True)

@@ -62,8 +62,8 @@ def make_yolo_format(image_info):
     return results_lines
 
 if __name__ == "__main__":
-    annotations_path = "/workspace/yolov7-finetune/annotations"
-    yolo_annotations_path = "/workspace/yolov7-finetune/yolo/labels"
+    annotations_path = "/yolov7/annotations"
+    yolo_annotations_path = "/yolov7/yolo/labels"
     names_to_idx_dict = {
         "mask_weared_incorrect": 0,
         "with_mask": 1,
