@@ -1,5 +1,5 @@
 import boto3
-s3 = boto3.resource('s3') 
+import os
 
 def download_s3_folder(s3, bucket_name, s3_folder, local_dir=None):
     bucket = s3.Bucket(bucket_name)
